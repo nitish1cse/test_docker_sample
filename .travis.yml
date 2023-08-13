@@ -6,6 +6,6 @@ before_install:
   - docker build -t nitish1cse/test_docker_sample -f Dockerfile.dev . -t
 
 script:
-  - docker run -e CI=true nitish1cse/test_docker_sample npm run tests
+  - docker run nitish1cse/test_docker_sample npm run tests -- --coverage
 
 
